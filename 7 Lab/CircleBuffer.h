@@ -11,9 +11,9 @@ using namespace std;
 template <class T>
 class CircleBuffer {
 public:
-    class iterator : public std::iterator<std::random_access_iterator_tag, T> { // мы определяем, что все типы указателей находятся в категории итераторов произвольного доступа
+    class iterator : public std::iterator<std::random_access_iterator_tag, T> { // РјС‹ РѕРїСЂРµРґРµР»СЏРµРј, С‡С‚Рѕ РІСЃРµ С‚РёРїС‹ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР°С…РѕРґСЏС‚СЃСЏ РІ РєР°С‚РµРіРѕСЂРёРё РёС‚РµСЂР°С‚РѕСЂРѕРІ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РґРѕСЃС‚СѓРїР°
     public:
-        using difference_type = typename std::iterator<std::random_access_iterator_tag, T> ::difference_type; // целочисленный тип со знаком, который можно использовать для определения расстояния между итераторами.
+        using difference_type = typename std::iterator<std::random_access_iterator_tag, T> ::difference_type; // С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹Р№ С‚РёРї СЃРѕ Р·РЅР°РєРѕРј, РєРѕС‚РѕСЂС‹Р№ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ РјРµР¶РґСѓ РёС‚РµСЂР°С‚РѕСЂР°РјРё.
 
         difference_type operator-(const iterator& obj) const {
             return data - obj.data;
