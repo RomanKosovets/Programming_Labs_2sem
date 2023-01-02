@@ -15,5 +15,3 @@ int main() {
     cout << ((is_partitioned(arr.begin(), arr.end(), predicat<int>)) ? "TRUE" : "FALSE") << endl;
     cout << ((find_backward(arr.begin(), arr.end(), 10))) << endl;
 }
-
-//"6 Lab/Algorithms.h" "6 Lab/main.cpp"
